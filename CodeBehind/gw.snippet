@@ -1,0 +1,43 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>GridView Aleph</Title>
+    <Author>Miguel Angel Inguanzo</Author>
+    <Shortcut>gw</Shortcut>    
+    <Description>Fragmento de código GridView</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>    
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>IdGrid</ID>
+        <ToolTip>Identificador del GridView</ToolTip>
+        <Default>gwListado</Default>
+        
+        <ID>keys</ID>
+        <ToolTip>Keys</ToolTip>
+        <Default>keys</Default>
+
+        <ID>pagezise</ID>
+        <ToolTip>pagesize</ToolTip>
+        <Default>10</Default>
+        
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[
+          <div class="table-responsive">
+            <asp:GridView ID="$IdGrid$" runat="server" DataKeyNames="$keys$" PageSize="$pagesize$" AllowSorting="true" AllowPaging="true"                         
+                           GridLines="None" CssClass="table table-hover" OnPageIndexChanging="$IdGrid$_PageIndexChanging"
+                           OnRowDataBound="$IdGrid$_RowDataBound" OnDataBound="$IdGrid$_DataBound" OnSelectedIndexChanging="$IdGrid$_SelectedIndexChanging"
+                           OnSorting="$IdGrid$_Sorting">
+                            <Columns>
+                                
+                            </Columns>
+                        </asp:GridView>
+          </div>]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

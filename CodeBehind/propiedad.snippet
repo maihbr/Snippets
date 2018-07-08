@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Boton Bootstrap 3</Title>
+      <Description>Propiedad c#</Description>
+      <Shortcut>propiedad</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Refactoring</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Tipo de dato</ToolTip>
+          <Default>int</Default>
+        </Literal>
+
+        <Literal>
+          <ID>MyPropiedad</ID>
+          <Default>Propiedad</Default>
+        </Literal>
+
+        <Literal>
+          <ID>DesType</ID>
+          <Default>int</Default>
+        </Literal>
+
+        <Literal>
+          <ID>Value</ID>
+          <Default>0</Default>
+        </Literal>
+        
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[
+             private $type$ $MyPropiedad$
+        {
+            get
+            {
+                $type$ vl_$DesType$$MyPropiedad$ = $Value$;
+                if (ViewState["_$DesType$$MyPropiedad$"] != null)
+                {
+                    vl_$DesType$$MyPropiedad$ = ($type$)ViewState["_$DesType$$MyPropiedad$"];
+                }
+                return vl_$DesType$$MyPropiedad$;
+            }
+
+            set { ViewState["_$DesType$$MyPropiedad$"] = value; }
+        }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
+

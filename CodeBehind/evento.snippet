@@ -1,0 +1,37 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Evento</Title>
+    <Author>Miguel Angel Inguanzo</Author>
+    <Shortcut>evento</Shortcut>
+    <AlternativeShortcuts>
+      <Shortcut Value="evento">evento</Shortcut>
+    </AlternativeShortcuts>
+    <Description>Fragmento de código evento</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <FileExtensions>
+      aspx;maestro;ascx
+    </FileExtensions>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>tipo</ID>
+        <ToolTip>tipo</ToolTip>
+      </Literal>
+      <Literal>
+        <ID>nombre</ID>
+        <ToolTip>nombre</ToolTip>        
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[
+      public event EventHandler<$tipo$> $nombre$;
+      public void On$nombre$(object sender,$tipo$ e)
+        {
+            $nombre$.Invoke(this,e);
+        }
+     ]]></Code>
+  </Snippet>
+</CodeSnippet>

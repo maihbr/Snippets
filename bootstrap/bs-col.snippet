@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Columna bootstrap</Title>
+      <Description>Columna Responsive</Description>
+      <Shortcut>
+        <![CDATA[bs-col]]>
+      </Shortcut>
+      <SnippetTypes>
+        <SnippetType>Refactoring</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes> 
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>lg</ID>
+          <ToolTip>Numero de columnas lg</ToolTip>
+          <Default>12</Default>
+        </Literal>
+        <Literal>
+          <ID>md</ID>
+          <ToolTip>Numero de columnas md</ToolTip>
+          <Default>12</Default>
+        </Literal>
+        <Literal>
+          <ID>sm</ID>
+          <ToolTip>Numero de columnas sm</ToolTip>
+          <Default>12</Default>
+        </Literal>
+        <Literal>
+          <ID>xs</ID>
+          <ToolTip>Numero de columnas xs</ToolTip>
+          <Default>12</Default>
+        </Literal>
+       
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[<div class="col-lg-$lg$ col-md-$md$ col-sm-$sm$ col-xs-$xs$"></div>]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
+
+

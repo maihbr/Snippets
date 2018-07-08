@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+        <Title>Panel Bootstrap 3 ( Sin colapsar )</Title>   
+        <Description>Elemento Panel con cabecera de bootstrap 3.x ( Sin colapsar )</Description>
+        <Shortcut>
+          <![CDATA[bs-panel]]>
+        </Shortcut>
+        <SnippetTypes>
+          <SnippetType>Refactoring</SnippetType>
+          <SnippetType>SurroundsWith</SnippetType>
+          <SnippetType>Expansion</SnippetType>
+        </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>idHeading</ID>
+          <ToolTip>Identificador Heading</ToolTip>
+          <Default>MyID</Default>
+        </Literal>
+        <Literal>
+          <ID>caption</ID>
+          <ToolTip>Caption de la cabecera</ToolTip>
+          <Default>MyCaption</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[ <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <h3 class="text-primary" id="$idHeading$" runat="server" >$caption$</h3>
+            </div>
+
+            <div class="panel-body">
+
+            </div>
+
+            <div class="panel-footer">
+
+            </div>
+
+        </div>
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

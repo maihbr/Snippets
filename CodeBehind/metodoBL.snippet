@@ -1,0 +1,63 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Metodo BL ( Sin Transaccion )</Title>
+    <Author>Miguel Angel Inguanzo</Author>
+    <Shortcut>metodobl</Shortcut>
+    <Description>Metodo BL ( Sin transaccion )</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>    
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>MyMetodo</ID>
+        <ToolTip>Nombre del metod</ToolTip>
+        <Default>MyMetodo</Default>
+      </Literal>
+      <Literal>
+        <ID>parametros</ID>
+        <ToolTip>parametros del método</ToolTip>
+        <Default>Parametros</Default>
+      </Literal>
+      <Literal>
+        <ID>sql_parametros</ID>
+        <ToolTip>parametros del método</ToolTip>
+        <Default>SQL_Parametros</Default>
+      </Literal>
+
+      <Literal>
+        <ID>tipo</ID>
+        <Default>DataTable</Default>
+      </Literal>
+
+      <Literal>
+        <ID>tipocorto</ID>
+        <Default>dt</Default>
+      </Literal>
+      
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[
+        
+         public $tipo$ $MyMetodo$($parametros$)
+        {
+            $tipo$ vl_$tipocorto$Salida = new $tipo$();
+
+            try
+            {
+                string vl_strSQL = SQL_$MyMetodo$($sql_parametros$);
+                IDataReader vl_idrLector = DataRepository.Provaider.ExecuteReader(CommandType.Text,vl_strSQL);
+                vl_$tipocorto$Salida.Load(vl_idrLector);
+            }
+            catch (Exception vl_Exception)
+            {
+                throw vl_Exception;
+            }
+
+            return vl_$tipocorto$Salida;
+        }
+        
+     ]]></Code>
+  </Snippet>
+</CodeSnippet>

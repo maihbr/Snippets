@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Input de texto en formulario bootstrap</Title>
+      <Description>Input de texto en formulario bootstrap</Description>
+      <Shortcut>
+        <![CDATA[bs-formtxt]]>
+      </Shortcut>
+      <SnippetTypes>
+        <SnippetType>Refactoring</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Identificador</ID>
+          <ToolTip>Id de la caja de texto</ToolTip>
+          <Default>MyId</Default>
+        </Literal>
+        <Literal>
+          <ID>Etiqueta</ID>
+          <ToolTip>Texto de la etiqueta</ToolTip>
+          <Default>MyLabel</Default>
+        </Literal>
+       
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[<div class="form-group">
+            <label id="HtmlLbl$Identificador$" runat="server">$Etiqueta$</label>
+            <input type="text" runat="server" id="HtmlTxt$Identificador$" class="form-control"  />
+        </div>]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
+
+
